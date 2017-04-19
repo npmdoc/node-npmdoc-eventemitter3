@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/primus/eventemitter3#readme"
-
-    >eventemitter3 (v2.0.3)</a>
+    <a href="https://github.com/primus/eventemitter3#readme">eventemitter3 (v2.0.3)</a>
 </h1>
 <h4>EventEmitter3 focuses on performance while maintaining a Node.js AND browser compatible interface.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.eventemitter3">module eventemitter3</a><ol>
 
@@ -327,7 +320,7 @@
       case 6: return listeners.fn.call(listeners.context, a1, a2, a3, a4, a5), true;
     }
 
-    for (i = 1, args = new Array(len -1); i &#x3c; len; i++) {
+    for (i = 1, args = new Array(len -1); i &lt; len; i++) {
       args[i - 1] = arguments[i];
     }
 
@@ -336,7 +329,7 @@
     var length = listeners.length
       , j;
 
-    for (i = 0; i &#x3c; length; i++) {
+    for (i = 0; i &lt; length; i++) {
       if (listeners[i].once) this.removeListener(event, listeners[i].fn, undefined, true);
 
       switch (len) {
@@ -345,7 +338,7 @@
         case 3: listeners[i].fn.call(listeners[i].context, a1, a2); break;
         case 4: listeners[i].fn.call(listeners[i].context, a1, a2, a3); break;
         default:
-          if (!args) for (j = 1, args = new Array(len -1); j &#x3c; len; j++) {
+          if (!args) for (j = 1, args = new Array(len -1); j &lt; len; j++) {
             args[j - 1] = arguments[j];
           }
 
@@ -405,7 +398,7 @@
   if (!available) return [];
   if (available.fn) return [available.fn];
 
-  for (var i = 0, l = available.length, ee = new Array(l); i &#x3c; l; i++) {
+  for (var i = 0, l = available.length, ee = new Array(l); i &lt; l; i++) {
     ee[i] = available[i].fn;
   }
 
@@ -426,7 +419,7 @@
 - The `removeListener` method removes all matching listeners, not only the
   first.
 
-It&#x27;s a drop in replacement for existing EventEmitters, but just faster. Free
+It's a drop in replacement for existing EventEmitters, but just faster. Free
 ...</pre></li>
     </ul>
 
@@ -454,18 +447,18 @@ It&#x27;s a drop in replacement for existing EventEmitters, but just faster. Fre
   if (listeners.fn) {
     if (
          listeners.fn === fn
-      &#x26;&#x26; (!once || listeners.once)
-      &#x26;&#x26; (!context || listeners.context === context)
+      &amp;&amp; (!once || listeners.once)
+      &amp;&amp; (!context || listeners.context === context)
     ) {
       if (--this._eventsCount === 0) this._events = new Events();
       else delete this._events[evt];
     }
   } else {
-    for (var i = 0, events = [], length = listeners.length; i &#x3c; length; i++) {
+    for (var i = 0, events = [], length = listeners.length; i &lt; length; i++) {
       if (
            listeners[i].fn !== fn
-        || (once &#x26;&#x26; !listeners[i].once)
-        || (context &#x26;&#x26; listeners[i].context !== context)
+        || (once &amp;&amp; !listeners[i].once)
+        || (context &amp;&amp; listeners[i].context !== context)
       ) {
         events.push(listeners[i]);
       }
@@ -504,15 +497,15 @@ It&#x27;s a drop in replacement for existing EventEmitters, but just faster. Fre
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  , context = { foo: &#x27;bar&#x27; };
+  , context = { foo: 'bar' };
 
 function emitted() {
   console.log(this === context); // true
 }
 
-EE.once(&#x27;event-name&#x27;, emitted, context);
-EE.<span class="apidocCodeKeywordSpan">on</span>(&#x27;another-event&#x27;, emitted, context);
-EE.removeListener(&#x27;another-event&#x27;, emitted, context);
+EE.once('event-name', emitted, context);
+EE.<span class="apidocCodeKeywordSpan">on</span>('another-event', emitted, context);
+EE.removeListener('another-event', emitted, context);
 ```
 
 ### Existence
@@ -543,15 +536,15 @@ To check if there is already a listener for a given event you can supply the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 var EE = new EventEmitter()
-  , context = { foo: &#x27;bar&#x27; };
+  , context = { foo: 'bar' };
 
 function emitted() {
   console.log(this === context); // true
 }
 
-EE.<span class="apidocCodeKeywordSpan">once</span>(&#x27;event-name&#x27;, emitted, context);
-EE.on(&#x27;another-event&#x27;, emitted, context);
-EE.removeListener(&#x27;another-event&#x27;, emitted, context);
+EE.<span class="apidocCodeKeywordSpan">once</span>('event-name', emitted, context);
+EE.on('another-event', emitted, context);
+EE.removeListener('another-event', emitted, context);
 ```
 
 ### Existence
@@ -612,18 +605,18 @@ To check if there is already a listener for a given event you can supply the
   if (listeners.fn) {
     if (
          listeners.fn === fn
-      &#x26;&#x26; (!once || listeners.once)
-      &#x26;&#x26; (!context || listeners.context === context)
+      &amp;&amp; (!once || listeners.once)
+      &amp;&amp; (!context || listeners.context === context)
     ) {
       if (--this._eventsCount === 0) this._events = new Events();
       else delete this._events[evt];
     }
   } else {
-    for (var i = 0, events = [], length = listeners.length; i &#x3c; length; i++) {
+    for (var i = 0, events = [], length = listeners.length; i &lt; length; i++) {
       if (
            listeners[i].fn !== fn
-        || (once &#x26;&#x26; !listeners[i].once)
-        || (context &#x26;&#x26; listeners[i].context !== context)
+        || (once &amp;&amp; !listeners[i].once)
+        || (context &amp;&amp; listeners[i].context !== context)
       ) {
         events.push(listeners[i]);
       }
@@ -645,9 +638,9 @@ function emitted() {
   console.log(this === context); // true
 }
 
-EE.once(&#x27;event-name&#x27;, emitted, context);
-EE.on(&#x27;another-event&#x27;, emitted, context);
-EE.<span class="apidocCodeKeywordSpan">removeListener</span>(&#x27;another-event&#x27;, emitted, context);
+EE.once('event-name', emitted, context);
+EE.on('another-event', emitted, context);
+EE.<span class="apidocCodeKeywordSpan">removeListener</span>('another-event', emitted, context);
 ```
 
 ### Existence
@@ -682,3 +675,4 @@ output from an array, to a boolean value which indicates if there are listeners
     ]
 </div>
 </div>
+</body></html>
