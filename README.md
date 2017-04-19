@@ -1,9 +1,14 @@
-# api documentation for  [eventemitter3 (v2.0.3)](https://github.com/primus/eventemitter3#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eventemitter3.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eventemitter3) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eventemitter3.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eventemitter3)
+# npmdoc-eventemitter3
+
+#### api documentation for  [eventemitter3 (v2.0.3)](https://github.com/primus/eventemitter3#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eventemitter3.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eventemitter3) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eventemitter3.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eventemitter3)
+
 #### EventEmitter3 focuses on performance while maintaining a Node.js AND browser compatible interface.
 
-[![NPM](https://nodei.co/npm/eventemitter3.png?downloads=true)](https://www.npmjs.com/package/eventemitter3)
+[![NPM](https://nodei.co/npm/eventemitter3.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/eventemitter3)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-eventemitter3/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-eventemitter3%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-eventemitter3/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-eventemitter3/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-eventemitter3/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-eventemitter3/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-eventemitter3/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-eventemitter3/build/screenCapture.npmPackageListing.svg)
 
@@ -61,22 +66,18 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "v1",
-            "email": "npm@3rd-Eden.com"
+            "name": "v1"
         },
         {
-            "name": "3rdeden",
-            "email": "npm@3rd-Eden.com"
+            "name": "3rdeden"
         },
         {
-            "name": "lpinca",
-            "email": "luigipinca@gmail.com"
+            "name": "lpinca"
         }
     ],
     "name": "eventemitter3",
     "optionalDependencies": {},
     "pre-commit": "sync, test",
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/primus/eventemitter3.git"
@@ -92,31 +93,6 @@
     "typings": "index.d.ts",
     "version": "2.0.3"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module eventemitter3](#apidoc.module.eventemitter3)
-1.  boolean <span class="apidocSignatureSpan">eventemitter3.</span>prefixed
-1.  [function <span class="apidocSignatureSpan">eventemitter3.</span>EventEmitter ()](#apidoc.element.eventemitter3.EventEmitter)
-
-
-
-# <a name="apidoc.module.eventemitter3"></a>[module eventemitter3](#apidoc.module.eventemitter3)
-
-#### <a name="apidoc.element.eventemitter3.EventEmitter"></a>[function <span class="apidocSignatureSpan">eventemitter3.</span>EventEmitter ()](#apidoc.element.eventemitter3.EventEmitter)
-- description and source-code
-```javascript
-function EventEmitter() {
-  this._events = new Events();
-  this._eventsCount = 0;
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
