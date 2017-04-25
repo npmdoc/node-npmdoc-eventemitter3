@@ -1,6 +1,6 @@
 # npmdoc-eventemitter3
 
-#### api documentation for  [eventemitter3 (v2.0.3)](https://github.com/primus/eventemitter3#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eventemitter3.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eventemitter3) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eventemitter3.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eventemitter3)
+#### basic api documentation for  [eventemitter3 (v2.0.3)](https://github.com/primus/eventemitter3#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-eventemitter3.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-eventemitter3) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-eventemitter3.svg)](https://travis-ci.org/npmdoc/node-npmdoc-eventemitter3)
 
 #### EventEmitter3 focuses on performance while maintaining a Node.js AND browser compatible interface.
 
@@ -91,7 +91,8 @@
         "test-browser": "zuul -- test.js"
     },
     "typings": "index.d.ts",
-    "version": "2.0.3"
+    "version": "2.0.3",
+    "bin": {}
 }
 ```
 
