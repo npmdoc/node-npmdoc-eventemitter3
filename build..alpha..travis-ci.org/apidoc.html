@@ -641,20 +641,20 @@ To check if there is already a listener for a given event you can supply the
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-function emitted() {
-  console.log(this === context); // true
-}
+  var listeners = this._events[evt]
+, len = arguments.length
+, args
+, i;
 
-EE.once(&#x27;event-name&#x27;, emitted, context);
-EE.on(&#x27;another-event&#x27;, emitted, context);
-EE.<span class="apidocCodeKeywordSpan">removeListener</span>(&#x27;another-event&#x27;, emitted, context);
-```
+  if (listeners.fn) {
+if (listeners.once) this.<span class="apidocCodeKeywordSpan">removeListener</span>(event, listeners.fn, undefined, true);
 
-### Existence
-
-To check if there is already a listener for a given event you can supply the
-`listeners` method with an extra boolean argument. This will transform the
-output from an array, to a boolean value which indicates if there are listeners
+switch (len) {
+  case 1: return listeners.fn.call(listeners.context), true;
+  case 2: return listeners.fn.call(listeners.context, a1), true;
+  case 3: return listeners.fn.call(listeners.context, a1, a2), true;
+  case 4: return listeners.fn.call(listeners.context, a1, a2, a3), true;
+  case 5: return listeners.fn.call(listeners.context, a1, a2, a3, a4), true;
 ...</pre></li>
     </ul>
 
